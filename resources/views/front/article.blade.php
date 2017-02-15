@@ -12,7 +12,7 @@
         width="900">
       @endforeach
     <hr>
-      {!! $articles->content !!}
+      <p align="center">{!! $articles->content !!}</p>
       <h2>Tags relacionados</h2>
       @foreach ($articles->tags as $tag)
         <span class="btn label-default">
@@ -32,7 +32,7 @@
         js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
-      <div class="fb-comments" data-href="http://localhost/blog/public/articles/15"
+      <div class="fb-comments" data-href="http://localhost/blog/public/articles/"
       data-numposts="5"></div>
   </div>
   <div class="col-md-3 aside">
