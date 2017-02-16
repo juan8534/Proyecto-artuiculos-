@@ -33,7 +33,7 @@ class AuthController extends Controller
         $this->middleware('guest', ['except' => 'getLogout']);
     }
 
-    protected $redirectPath = '/admin';
+    protected $redirectPath = '/admin';  //Si se desa dar la raiz solo colocamos /
 
     protected $loginPath = '/admin/auth/login';
 
@@ -65,6 +65,15 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    public function redirectPath()
+    {
+      if (auth()->user()->admin())
+      {
+        return '/admin';
+      }
+        return '/';
     }
 
     protected function getlogin()

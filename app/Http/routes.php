@@ -17,8 +17,8 @@
 
 //Ruta vista principal
 Route::get('/',[
-  'as' => 'front.index',
-  'uses' => 'FrontController@index'
+  'uses' => 'FrontController@index',
+  'as' => 'front.index'
 ]);
 
 //Ruta para filtrar por categorias
