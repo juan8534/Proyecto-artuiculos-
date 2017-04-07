@@ -67,7 +67,7 @@ class AuthController extends Controller
         ]);
     }
 
-    public function redirectPath()
+    public function redirectPath() // funcion para redireccionar dependiendo de usuario
     {
       if (auth()->user()->admin())
       {
